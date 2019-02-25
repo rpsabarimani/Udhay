@@ -68,15 +68,12 @@ export default class LoginScreen extends React.Component {
   };
 
   _storeData = async (name, response) => {
-    console.log(response);
     await AsyncStorage.setItem(name, response);
   };
 
   hideSnackBar() {
     this.refs.SnackBar.hide();
   }
-
-  componentDidMount() {}
 
   render() {
     return (

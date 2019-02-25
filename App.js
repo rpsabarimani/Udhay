@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import {
   createDrawerNavigator,
   createAppContainer,
-  createStackNavigator,
-  AsyncStorage
+  createStackNavigator
 } from "react-navigation";
 import { TouchableOpacity } from "react-native";
 import SideMenu from "./app/SideMenu";
@@ -14,7 +13,7 @@ import SplashScreen from "./app/Views/SplashScreen";
 
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-const StackScreenNew = createStackNavigator(
+const stackNavigator = createStackNavigator(
   {
     DasboardScreen: {
       screen: DasboardScreen,
@@ -58,7 +57,7 @@ const StackScreenNew = createStackNavigator(
 const drawerScreens = createDrawerNavigator(
   {
     Dashboard: {
-      screen: StackScreenNew
+      screen: stackNavigator
     }
   },
   {

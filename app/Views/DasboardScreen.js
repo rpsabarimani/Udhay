@@ -34,11 +34,8 @@ export default class DasboardScreen extends Component {
       }
     )
       .then(() => {
-        console.log("wokeeey");
         navigator.geolocation.getCurrentPosition(
           position => {
-            console.log("wokeeey in");
-            console.log(position);
             this.setState({
               latitude: position.coords.latitude,
               longitude: position.coords.longitude
@@ -62,8 +59,6 @@ export default class DasboardScreen extends Component {
         console.log(e);
       });
   };
-
-  updateLocations = () => {};
 
   fetchData = async () => {
     this.setState({
@@ -96,9 +91,6 @@ export default class DasboardScreen extends Component {
     this.fetchData();
   }
 
-  static navigationOptions = {
-    title: "Home"
-  };
   render() {
     return this.state.isLoading ? (
       <View

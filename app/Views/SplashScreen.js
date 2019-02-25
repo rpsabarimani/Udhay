@@ -1,13 +1,5 @@
-import React, { Component } from "react";
-import {
-  StyleSheet,
-  View,
-  ActivityIndicator,
-  Text,
-  TextInput,
-  AsyncStorage,
-  TouchableOpacity
-} from "react-native";
+import React from "react";
+import { View, ActivityIndicator, AsyncStorage } from "react-native";
 import { StackActions, NavigationActions } from "react-navigation";
 
 export default class LoginScreen extends React.Component {

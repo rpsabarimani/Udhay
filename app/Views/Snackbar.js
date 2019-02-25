@@ -5,7 +5,6 @@ import { View, Text, StyleSheet, Animated } from "react-native";
 var Snackbar = class Snackbar extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.animatedValue = new Animated.Value(50);
     this.state = {
       msg: "Hi, This is my Snackbar",

@@ -19,7 +19,7 @@ class SideMenu extends Component {
   constructor(props) {
     super(props);
     this.state = { username: "" };
-    const val = this._retrieveData();
+    this._retrieveData();
   }
 
   _retrieveData = async () => {
